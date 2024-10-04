@@ -1,8 +1,9 @@
+import { baseText } from "@/app/style/baseClass";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-
-import { baseText } from "@/app/style/baseClass";
+import { FaRegTrashAlt } from "react-icons/fa";
 import { groupInfoType } from "./page";
+import Link from "next/link";
 
 type Props = {
   index: number;
@@ -19,18 +20,26 @@ export const Group = ({ index, groupInfo }: Props) => {
 
   return (
     <Button className={`w-96 h-36 ${setBgColor(index)} flex flex-col`} asChild>
-      <div className={baseText}>
+      <Link href={`/projects/${groupInfo.id}`}>
+      <div className={`${baseText} relative`}>
+        <button className="text-xl hover:text-rose-800 absolute right-7 top-7">
+          <FaRegTrashAlt />
+        </button>
+
         <h3 className="text-2xl">{groupInfo.title}</h3>
         <h3>{groupInfo.members.length} members</h3>
         <div className="flex">
           {groupInfo.members.map((member, i) => (
-            <Avatar key={i}>
-              <AvatarImage src="" />
-              <AvatarFallback>{member}</AvatarFallback>
-            </Avatar>
+            <div key={i} className="m-1">
+              <Avatar>
+                <AvatarImage src="" />
+                <AvatarFallback>{member}</AvatarFallback>
+              </Avatar>
+            </div>
           ))}
         </div>
       </div>
+      </Link>
     </Button>
   );
 };

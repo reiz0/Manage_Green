@@ -5,6 +5,7 @@ import { FaPlus } from "react-icons/fa6";
 import { Group } from "./_group.component";
 
 export type groupInfoType = {
+  id: string
   title: string;
   members: string[];
 };
@@ -12,18 +13,22 @@ export type groupInfoType = {
 export default function Page() {
   const groups: groupInfoType[] = [
     {
+      id: "1",
       title: "Work Project",
       members: ["dog", "cat", "monkey"],
     },
     {
+      id: "2",
       title: "Personal Tasks",
       members: ["dog"],
     },
     {
+      id: "3",
       title: "Shopping List",
       members: ["dog", "cat"],
     },
     {
+      id: "4",
       title: "gaming",
       members: ["dog", "lion"],
     },
