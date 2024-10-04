@@ -1,0 +1,1 @@
+export const baseText = "text-teal-700"
