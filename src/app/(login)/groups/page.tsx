@@ -30,11 +30,11 @@ export default function Page() {
   ];
   return (
     <div className="text-center">
-      <h1 className={`text-4xl font-bold ${baseText} mb-10 mt-5`}>My Task Groups</h1>
+      <h1 className={`text-4xl font-bold ${baseText} mb-10 pt-5`}>My Task Groups</h1>
       <div className="grid place-items-center">
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           <Button
-            className="bg-slate-50 hover:bg-green-100 w-96 h-36 flex flex-col text-2xl"
+            className="bg-slate-50 hover:bg-lime-200 w-96 h-36 flex flex-col text-2xl"
             asChild
           >
             <div className={`${baseText}`}>
