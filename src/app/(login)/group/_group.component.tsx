@@ -19,8 +19,9 @@ export const Group = ({ index, groupInfo }: Props) => {
   };
 
   return (
+    <Link href={`/group/${groupInfo.id}`}>
     <Button className={`w-96 h-36 ${setBgColor(index)} flex flex-col`} asChild>
-      <Link href={`/projects/${groupInfo.id}`}>
+      
       <div className={`${baseText} relative`}>
         <button className="text-xl hover:text-rose-800 absolute right-7 top-7">
           <FaRegTrashAlt />
@@ -39,7 +40,8 @@ export const Group = ({ index, groupInfo }: Props) => {
           ))}
         </div>
       </div>
-      </Link>
+      
     </Button>
+    </Link>
   );
 };
