@@ -1,13 +1,15 @@
 import { baseText } from "@/app/style/baseClass";
 import { setBgColor } from "@/app/style/setStyle";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import { FaPlus } from "react-icons/fa";
 import { taskType } from "./page";
 
 type Props = {
@@ -26,18 +28,33 @@ const TaskCard = ({ status, tasks }: Props) => {
           </CardHeader>
           <AccordionContent className="bg-emerald-50 rounded-b-xl">
             <CardContent className="pb-0 pt-4">
-              {tasks.map((task, index) => {
-                return (
+              {status === "Todo" && (
+                <Link href={`/task`}>
                   <Button
-                    key={index}
                     asChild
-                    className={`w-full ${setBgColor(index)} ${baseText} my-2`}
+                    className={`w-full my-2 bg-slate-50 hover:bg-lime-200 ${baseText}`}
                   >
-                    <div className="justify-between">
-                      <h1>{task.title}</h1>
-                      <div>{task.assignees.length}</div>
+                    <div className="">
+                      <FaPlus />
+                      &ensp;
+                      <p>Create New Task</p>
                     </div>
                   </Button>
+                </Link>
+              )}
+              {tasks.map((task, index) => {
+                return (
+                  <Link href={`/task/${task.id}`} key={index}>
+                    <Button
+                      asChild
+                      className={`w-full ${setBgColor(index)} ${baseText} my-2`}
+                    >
+                      <div className="justify-between">
+                        <h1>{task.title}</h1>
+                        <div>{task.assignees.length}</div>
+                      </div>
+                    </Button>
+                  </Link>
                 );
               })}
             </CardContent>
