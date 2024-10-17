@@ -1,10 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import { FaArrowLeft, FaShareAlt } from "react-icons/fa";
+import { FaArrowLeft, FaRegTrashAlt } from "react-icons/fa";
+
+import { groupInfoType } from "@/types/group";
+import { Detail } from "./_components/Detail";
+import { Status } from "./_components/Status";
+import { Assignees } from "./_components/Assignees";
+import { StartDate } from "./_components/StartDate";
 
 const page = () => {
+  const group: groupInfoType = {
+    id: "1",
+    title: "Work Project",
+    members: ["dog", "cat", "monkey"],
+  };
+
   return (
     <div className="grid place-items-center">
       <div>
@@ -23,20 +35,15 @@ const page = () => {
             />
           </div>
           <Button className="bg-emerald-700 hover:bg-emerald-600">
-            <FaShareAlt />
-            &ensp;Share
+            <FaRegTrashAlt />
+            &ensp;Delete
           </Button>
         </div>
         <Card>
-          <CardHeader>
-            <div></div>
-            <div>
-              <div>
-                <CardTitle>Status</CardTitle>
-              </div>
-            </div>
-          </CardHeader>
-          <CardContent></CardContent>
+          <Detail />
+          <Status />
+          <Assignees group={group} />
+          <StartDate />
         </Card>
       </div>
     </div>

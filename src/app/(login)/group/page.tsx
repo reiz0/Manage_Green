@@ -1,14 +1,9 @@
 import { Button } from "@/components/ui/button";
 
 import { baseText } from "@/style/baseClass";
+import { groupInfoType } from "@/types/group";
 import { FaPlus } from "react-icons/fa6";
 import { Group } from "./_group.component";
-
-export type groupInfoType = {
-  id: string;
-  title: string;
-  members: string[];
-};
 
 export default function Page() {
   const groups: groupInfoType[] = [

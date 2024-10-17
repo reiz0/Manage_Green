@@ -2,9 +2,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { baseText } from "@/style/baseClass";
 import { setBgColor } from "@/style/setStyle";
+import { groupInfoType } from "@/types/group";
 import Link from "next/link";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { groupInfoType } from "./page";
 
 type Props = {
   index: number;
@@ -30,7 +30,9 @@ export const Group = ({ index, groupInfo }: Props) => {
               <div key={i} className="m-1">
                 <Avatar>
                   <AvatarImage src="" />
-                  <AvatarFallback>{member}</AvatarFallback>
+                  <AvatarFallback className="font-bold text-2xl">
+                    {member[1]}
+                  </AvatarFallback>
                 </Avatar>
               </div>
             ))}
