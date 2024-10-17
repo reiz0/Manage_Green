@@ -1,5 +1,3 @@
-import { baseText } from "@/app/style/baseClass";
-import { setBgColor } from "@/app/style/setStyle";
 import {
   Accordion,
   AccordionContent,
@@ -8,6 +6,8 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { baseText } from "@/style/baseClass";
+import { setBgColor } from "@/style/setStyle";
 import Link from "next/link";
 import { FaPlus } from "react-icons/fa";
 import { taskType } from "./page";

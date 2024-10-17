@@ -1,7 +1,7 @@
-import { baseText } from "@/app/style/baseClass";
-import { setBgColor } from "@/app/style/setStyle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { baseText } from "@/style/baseClass";
+import { setBgColor } from "@/style/setStyle";
 import Link from "next/link";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { groupInfoType } from "./page";

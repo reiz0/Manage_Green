@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 
-import { baseText } from "@/app/style/baseClass";
+import { baseText } from "@/style/baseClass";
 import { FaPlus } from "react-icons/fa6";
 import { Group } from "./_group.component";
 
 export type groupInfoType = {
-  id: string
+  id: string;
   title: string;
   members: string[];
 };
@@ -35,7 +35,9 @@ export default function Page() {
   ];
   return (
     <div className="text-center">
-      <h1 className={`text-4xl font-bold ${baseText} mb-10 pt-5`}>My Task Groups</h1>
+      <h1 className={`text-4xl font-bold ${baseText} mb-10 pt-5`}>
+        My Task Groups
+      </h1>
       <div className="grid place-items-center">
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           <Button
