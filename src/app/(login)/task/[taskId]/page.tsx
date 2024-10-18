@@ -9,6 +9,7 @@ import { Detail } from "./_components/Detail";
 import { Status } from "./_components/Status";
 import { Assignees } from "./_components/Assignees";
 import { StartDate } from "./_components/StartDate";
+import { EndDate } from "./_components/EndDate";
 
 const page = () => {
   const group: groupInfoType = {
@@ -44,6 +45,7 @@ const page = () => {
           <Status />
           <Assignees group={group} />
           <StartDate />
+          <EndDate />
         </Card>
       </div>
     </div>
