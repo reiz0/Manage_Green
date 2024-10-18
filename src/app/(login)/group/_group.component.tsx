@@ -31,7 +31,7 @@ export const Group = ({ index, groupInfo }: Props) => {
                 <Avatar>
                   <AvatarImage src="" />
                   <AvatarFallback className="font-bold text-2xl">
-                    {member[1]}
+                    {member[0]}
                   </AvatarFallback>
                 </Avatar>
               </div>
