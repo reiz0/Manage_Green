@@ -1,4 +1,6 @@
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Editor } from "./Editor";
+
 
 export const Detail = () => {
   return (
@@ -6,7 +8,9 @@ export const Detail = () => {
       <CardHeader>
         <CardTitle>Details</CardTitle>
       </CardHeader>
-      <CardContent></CardContent>
+      <CardContent>
+        <Editor />
+      </CardContent>
     </>
   );
 };
