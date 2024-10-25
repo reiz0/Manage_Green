@@ -20,7 +20,7 @@ const page = () => {
 
   return (
     <div className="grid place-items-center">
-      <div>
+      <div className="w-[550px]">
         <div className="sm:flex justify-between">
           <Link href={`/group`}>
             <Button className="bg-emerald-700 hover:bg-emerald-600">
