@@ -12,7 +12,7 @@ export const Editor = () => {
     extensions: [StarterKit, Underline],
     editorProps: {
       attributes: {
-        class: "m-5 focus:outline-none h-full prose prose-sm",
+        class: "focus:outline-none h-full prose prose-sm  [&_p]:m-1",
       },
     },
     content: "<p>Hello World! 🌎️</p>",
@@ -53,7 +53,7 @@ export const Editor = () => {
         />
       </div>
       <div
-        className="border-2 rounded-md w-full h-[600px] overflow-y-scroll overflow-hidden"
+        className="border-2 rounded-md w-full h-[600px] overflow-y-scroll overflow-hidden p-5"
         onClick={() => editor.chain().focus()}
       >
         <EditorContent editor={editor} />
