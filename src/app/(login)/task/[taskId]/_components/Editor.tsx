@@ -1,7 +1,6 @@
 "use client";
 
 import Underline from "@tiptap/extension-underline";
-// import BulletList from '@tiptap/extension-bullet-list'
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
@@ -13,20 +12,12 @@ export const Editor = () => {
     extensions: [StarterKit, Underline],
     editorProps: {
       attributes: {
-        class: "m-5 focus:outline-none h-full prose [&_ol]:list-decimal [&_ul]:list-disc",
+        class: "m-5 focus:outline-none h-full prose prose-sm",
       },
     },
     content: "<p>Hello World! 🌎️</p>",
   });
 
-  // StarterKit.configure({
-  //   bulletList:{
-  //     keepMarks: true,
-  //     HTMLAttributes:{
-  //       class: "list-disc"
-  //     }
-  //   }
-  // })
   
   if (!editor) {
     return (
