@@ -13,7 +13,7 @@ export const Editor = () => {
     extensions: [StarterKit, Underline],
     editorProps: {
       attributes: {
-        class: "m-5 focus:outline-none h-full",
+        class: "m-5 focus:outline-none h-full prose [&_ol]:list-decimal [&_ul]:list-disc",
       },
     },
     content: "<p>Hello World! 🌎️</p>",
