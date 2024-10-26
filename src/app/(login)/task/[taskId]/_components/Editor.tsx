@@ -12,7 +12,7 @@ export const Editor = () => {
     extensions: [StarterKit, Underline],
     editorProps: {
       attributes: {
-        class: "focus:outline-none h-full prose prose-sm  [&_p]:m-1",
+        class: "focus:outline-none h-full prose [&_p]:m-1",
       },
     },
     content: "<p>Hello World! 🌎️</p>",

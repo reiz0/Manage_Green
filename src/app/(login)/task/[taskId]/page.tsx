@@ -5,11 +5,11 @@ import Link from "next/link";
 import { FaArrowLeft, FaRegTrashAlt } from "react-icons/fa";
 
 import { groupInfoType } from "@/types/group";
-import { Detail } from "./_components/Detail";
-import { Status } from "./_components/Status";
 import { Assignees } from "./_components/Assignees";
-import { StartDate } from "./_components/StartDate";
+import { Detail } from "./_components/Detail";
 import { EndDate } from "./_components/EndDate";
+import { StartDate } from "./_components/StartDate";
+import { Status } from "./_components/Status";
 
 const page = () => {
   const group: groupInfoType = {
@@ -20,7 +20,7 @@ const page = () => {
 
   return (
     <div className="grid place-items-center">
-      <div className="w-[550px]">
+      <div>
         <div className="sm:flex justify-between">
           <Link href={`/group`}>
             <Button className="bg-emerald-700 hover:bg-emerald-600">
@@ -41,11 +41,15 @@ const page = () => {
           </Button>
         </div>
         <Card>
-          <Detail />
-          <Status />
-          <Assignees group={group} />
-          <StartDate />
-          <EndDate />
+          <div  className="w-[550px]">
+            <Detail />
+          </div>
+          <div>
+            <Status />
+            <Assignees group={group} />
+            <StartDate />
+            <EndDate />
+          </div>
         </Card>
       </div>
     </div>
