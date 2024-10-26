@@ -6,6 +6,9 @@ import StarterKit from "@tiptap/starter-kit";
 
 import { FaBold, FaItalic, FaStrikethrough, FaUnderline } from "react-icons/fa";
 import { MdFormatListBulleted } from "react-icons/md";
+import { MdFormatListNumbered } from "react-icons/md";
+import { LuHeading1 } from "react-icons/lu";
+import { LuHeading2 } from "react-icons/lu";
 
 export const Editor = () => {
   const editor = useEditor({
@@ -51,6 +54,12 @@ export const Editor = () => {
           className={editor.isActive("bulletList") ? activeClass : edditorButtonClass}
           onClick={() => editor.chain().focus().toggleBulletList().run()}
         />
+        <MdFormatListNumbered className={editor.isActive("orderedList") ? activeClass : edditorButtonClass}
+          onClick={() => editor.chain().focus().toggleOrderedList().run()} />
+          <LuHeading1 className={editor.isActive('heading', { level: 1 }) ? activeClass : edditorButtonClass}
+          onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}/>
+          <LuHeading2 className={editor.isActive('heading', { level: 2 }) ? activeClass : edditorButtonClass}
+          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}/>
       </div>
       <div
         className="border-2 rounded-md w-full h-[600px] overflow-y-scroll overflow-hidden p-5"
